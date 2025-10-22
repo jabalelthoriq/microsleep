@@ -14,7 +14,7 @@
 
 ## 🎥 **Demo Sistem**
 <p align="center">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.adrirobot.it%2Fesp32-cam-development-board%2F&psig=AOvVaw1xA6NuHNdFWRQzC4kriCqY&ust=1761195482277000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMi3m9SCt5ADFQAAAAAdAAAAABAE" width="600"/>
+  <img src="https://www.adrirobot.it/wp-content/uploads/2020/03/ESP32-CAM.gif" width="600"/>
   <br/>
   <i>ESP32-CAM mengirim gambar → API Render mendeteksi kondisi mata & mulut → hasil dikirim kembali (Normal, Yawning, Microsleep)</i>
 </p>

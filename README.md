@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://media.giphy.com/media/IwTWTsUzmIicM/giphy.gif" width="200"/>
-</p>
+
 
 <h1 align="center">🚗 EyeGuard Cloud API — Sistem Deteksi Microsleep Realtime</h1>
 
@@ -16,7 +14,7 @@
 
 ## 🎥 **Demo Sistem**
 <p align="center">
-  <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" width="600"/>
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.adrirobot.it%2Fesp32-cam-development-board%2F&psig=AOvVaw1xA6NuHNdFWRQzC4kriCqY&ust=1761195482277000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMi3m9SCt5ADFQAAAAAdAAAAABAE" width="600"/>
   <br/>
   <i>ESP32-CAM mengirim gambar → API Render mendeteksi kondisi mata & mulut → hasil dikirim kembali (Normal, Yawning, Microsleep)</i>
 </p>
@@ -36,11 +34,12 @@ Sistem ini dibangun menggunakan dua model ringan:
 
 ## ⚙️ **Arsitektur Sistem**
 ESP32-CAM → Cloud (FastAPI di Render)
-├── MediaPipe FaceMesh (crop ROI)
-├── Model Mata (MobileNetV3-Small)
-├── Model Mulut (EfficientNet-B0)
-├── Decision Logic (Normal / Yawning / Microsleep)
-└── JSON Output → {"eye":"closed", "mouth":"no_yawn", "state":"MICROSLEEP"}
+           ├── MediaPipe FaceMesh (crop ROI)
+           ├── Model Mata (MobileNetV3-Small)
+           ├── Model Mulut (EfficientNet-B0)
+           ├── Decision Logic (Normal / Yawning / Microsleep)
+           └── JSON Output → {"eye":"closed", "mouth":"no_yawn", "state":"MICROSLEEP"}
+
 <p align="center">
   <img src="https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif" width="550"/>
 </p>
@@ -51,17 +50,18 @@ ESP32-CAM → Cloud (FastAPI di Render)
 microsleep-cloud/
 │
 ├── app/
-│ ├── main.py # Server FastAPI utama
-│ ├── model_eye.py # Model TFLite untuk deteksi mata
-│ ├── model_mouth.py # Model ONNX untuk deteksi mulut
-│ ├── mediapipe_utils.py # Ekstraksi mata & mulut dengan MediaPipe
-│ ├── logic.py # Logika keputusan akhir
-│ └── requirements.txt
+│   ├── main.py             # Server FastAPI utama
+│   ├── model_eye.py        # Model TFLite untuk deteksi mata
+│   ├── model_mouth.py      # Model ONNX untuk deteksi mulut
+│   ├── mediapipe_utils.py  # Ekstraksi mata & mulut dengan MediaPipe
+│   ├── logic.py            # Logika keputusan akhir
+│   └── requirements.txt
 │
 ├── models/
-│ ├── eye_model.tflite
-│ └── mouth_model.onnx
+│   ├── eye_model.tflite
+│   └── mouth_model.onnx
 │
-├── render.yaml # Konfigurasi Render Cloud
-├── runtime.txt # Versi Python
+├── render.yaml             # Konfigurasi Render Cloud
+├── runtime.txt             # Versi Python
 └── README.md
+
